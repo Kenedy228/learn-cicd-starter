@@ -22,7 +22,7 @@ func TestAuthWithValidHeaders(t *testing.T) {
 
 	for i := range keys {
 		headers := http.Header{}
-		headers.Add("", keys[i])
+		headers.Add("Authorization", keys[i])
 
 		key, err := auth.GetAPIKey(headers)
 
